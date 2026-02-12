@@ -68,11 +68,28 @@ git clone --recursive git@github.com:<owner>/study_2024-2025_mathmod.git mathmod
 
 Создание вручную
 
+Use this template
+Owner: aatarasovaa
+Repository name: study_2026-2027_mathmod
+Public
+
+![Результат лабораторной работы 0.1](images/lab0.1.jpg){#fig-001 width=70%}
+Рисунок 1 показывает создания репозитория вручную ([рис. @fig-001]).
+
 Руководство: Создание репозитория на основе шаблона
 
-Настройка каталога курса
+Обновляем систему
+sudo apt update
+sudo apt install -y git make
 
-cd ~/work/study/2024-2025/"Математическое моделирование"/mathmod
+![Результат лабораторной работы 0.2](images/lab0.2.jpg){#fig-001 width=70%}
+
+Настройка каталога курса
+mkdir -p ~/work/study/2024-2025/"Математическое моделирование"
+cd ~/work/study/2024-2025/"Математическое моделирование"
+
+![Результат лабораторной работы 0.1](images/lab0.1.jpg){#fig-001 width=70%}
+Рисунок 1 показывает создания репозитория вручную ([рис. @fig-001]).
 rm package.json
 echo mathmod > COURSE
 make prepare
