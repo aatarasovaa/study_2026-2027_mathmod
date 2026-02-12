@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converted from Markdown</title>
+  <style>
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+      line-height: 1.6; 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 20px;
+      color: #333;
+    }
+    h1, h2, h3 { color: #333; margin-top: 1.5em; margin-bottom: 0.5em; }
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.2em; }
+    code { 
+      background: #f4f4f4; 
+      padding: 2px 4px; 
+      border-radius: 3px; 
+      font-family: 'Courier New', monospace;
+    }
+    pre { 
+      background: #f4f4f4; 
+      padding: 15px; 
+      border-radius: 5px; 
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      line-height: 1.4;
+    }
+    blockquote { 
+      border-left: 4px solid #ddd; 
+      margin: 1em 0; 
+      padding-left: 20px; 
+      color: #666;
+      font-style: italic;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1em 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+    }
+    ul, ol {
+      margin: 1em 0;
+      padding-left: 2em;
+    }
+    li {
+      margin: 0.5em 0;
+    }
+  </style>
+</head>
+<body>
+<hr>
+<h2>Author</h2>
+<p>author:
+  name: aatarasova
+  degrees: 
+  orcid: 
+  email: 
+  affiliation:
+    - name: Российский университет дружбы народов
+      country: Российская Федерация
+      postal-code: 117198
+      city: Москва
+      address: ул. Миклухо-Маклая, д. 6</p>
+<h2>Title</h2>
+<h2>title: &quot;Отчёт по лабораторной работе&quot;
+subtitle: &quot;study_2026-2027_mathmod&quot;
+license: &quot;CC BY&quot;</h2>
+<h1>Цель работы</h1>
+<p>Цель лабораторной работы — освоить организацию рабочего пространства для курса «Математическое моделирование» и изучить стандартную структуру репозитория на основе шаблона.</p>
+<h1>Задание</h1>
+<ol>
+<li>Создать рабочее пространство для лабораторной работы по предмету «Математическое моделирование».</li>
+<li>Настроить репозиторий курса на основе шаблона.</li>
+<li>Ознакомиться с правилами именования каталогов и проектов.</li>
+<li>Настроить структуру каталогов для лабораторных и проектных работ.</li>
+<li>Загрузить структуру курса на сервер GitHub.</li>
+</ol>
+<h1>Теоретическое введение</h1>
+<p>В ходе работы используется стандартная иерархия каталогов Unix и шаблон курса для организации репозиториев.  </p>
+<p><strong>Структура рабочего пространства по предмету:</strong></p>
+<p>~/work/study/
+└── &lt;учебный год&gt;/
+└── &lt;название предмета&gt;/
+└── &lt;код предмета&gt;/</p>
+<p>Пример: <code>study_2024-2025_mathmod</code>.</p>
+<p><strong>Каталоги лабораторных работ и проектов:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Каталог</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>labs/lab01, lab02...</td>
+<td>Каталоги лабораторных работ</td>
+</tr>
+<tr>
+<td>group-project</td>
+<td>Каталог групповых проектов</td>
+</tr>
+<tr>
+<td>personal-project</td>
+<td>Каталог персональных проектов</td>
+</tr>
+<tr>
+<td>stage01, stage02...</td>
+<td>Этапы проекта</td>
+</tr>
+</tbody></table>
+<p><strong>Шаблон для рабочего пространства:</strong><br>Репозиторий: <a href="https://github.com/yamadharma/course-directory-student-template">course-directory-student-template</a></p>
+<h1>Выполнение лабораторной работы</h1>
+<h2>Создание репозитория через утилиты</h2>
+<pre><code class="language-bash">mkdir -p ~/work/study/2024-2025/&quot;Математическое моделирование&quot;
+cd ~/work/study/2024-2025/&quot;Математическое моделирование&quot;
+gh repo create study_2024-2025_mathmod --template=yamadharma/course-directory-student-template --public
+git clone --recursive git@github.com:&lt;owner&gt;/study_2024-2025_mathmod.git mathmod
+
+Создание вручную
+
+Руководство: Создание репозитория на основе шаблона
+
+Настройка каталога курса
+
+cd ~/work/study/2024-2025/&quot;Математическое моделирование&quot;/mathmod
+rm package.json
+echo mathmod &gt; COURSE
+make prepare
+git add .
+git commit -am &#39;feat(main): make course structure&#39;
+git push
+
+
+Выводы
+
+В ходе работы был освоен процесс создания рабочего пространства, настроена структура каталогов для лабораторных и проектных работ. Репозиторий курса успешно создан на основе шаблона, что позволит стандартизировать выполнение лабораторных и дальнейших проектов.
+
+
+Список литературы::: {#refs} :::
+</code></pre>
+
+</body>
+</html>
